@@ -1,41 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Oscar Lupton - Home</title>
-	<meta name="description" content="https://oscar.lupton.de">
-	<meta name="author" content="Oscar Lupton">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/normalize.css">
-    <!-- Themes:
-            Auto:   css/skeleton-auto.css
-            Light:  css/skeleton-light.css
-            Dark:   css/skeleton-dark.css
-     -->
-	<link rel="stylesheet" href="css/skeleton-auto.css">
+<html class="theme-dark" lang="en"> <!-- Update `class="theme-auto"` with your preference -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oscar Lupton</title>
+    <link rel="icon" type="image/png" href="images/avatar.png">
+    <meta name="description" content="Homepage - Oscar Lupton">
+    <link rel="canonical" href="https://oscar.lupton.de">
+    <meta name="author" content="Oscar Lupton">
+
+    <!-- Browser UI Color - Matches the default light/dark theme backgrounds -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+
+    <!-- Social Sharing (Open Graph & Twitter) - Uncomment and fill in to control how your page
+         looks when shared on social platforms and in chat apps.
+         og:url and og:image must be full absolute URLs. -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Oscar Lupton">
+    <meta property="og:description" content="Homepage - Oscar Lupton">
+    <meta property="og:url" content="https://oscar.lupton.de">
+    <meta property="og:image" content="https://yourwebsite.com/images/avatar@2x.png">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Font Preloads - Lets the browser fetch fonts in parallel with the stylesheets -->
+    <link rel="preload" href="fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/brands.css">
-	<link rel="icon" type="image/png" href="images/littlelink.png">
-</head>
+
+    <!-- LittleLink Extended Stylesheet (Optional) -->
+    <!-- <link rel="stylesheet" href="css/brands-extended.css"> -->
+    <!-- Learn more at https://github.com/sethcottle/littlelink-extended.
+         Remove comments if you've added LittleLink Extended dependencies -->
+  </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="column" style="margin-top: 10%">
-        <img src="images/pfp2.jpg" class="avatar" alt="Profile picture">
-        <h1 role="heading">Oscar Lupton</h1>
-        <p>IT Technician, <a href="https://smash.org.au" target="_blank" rel="noreferrer noopener" role="link">SMASH!</a> Media TL, DHTech.<br />Photographer, videographer, and broadcast technician.</p>
-        
-		<!-- <a class="button button-default" href="https://calendar.app.google/vAG1ocFtWGieoysLA" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-calendar.svg" alt="Calendar Icon">PAX Aus shoots!</a><br>-->
-		<br>
-        <a class="button button-instagram" href="https://instagram.com/oscarlupton" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/instagram.svg" alt="">Instagram</a><br>
-        <!-- <a class="button button-default" href="https://oscarlupton.myportfolio.com" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-website.svg" alt="">Portfolio</a><br> -->
-        <a class="button button-signal" href="https://signal.me/#eu/QRf6q_CpU5h0sT-snccDDAUQrQ_7VvVHqNGoFlzh4Rq5AwNLsBVK_o2ijdi_viDz" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/signal.svg" alt="Signal Logo">Signal</a><br>
-        <a class="button button-linked" href="https://linkedin.com/in/oscarlupton" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/linkedin.svg" alt="">LinkedIn</a><br>
-        <br>
-        <a class="button button-default" href="albums.html" target="_self" rel="noopener" role="button"><img class="icon" src="images/icons/generic-website.svg" alt="">Photo albums</a><br>
-        <br>
-        <p>Forked from <a href="https://littlelink.io" target="_blank" rel="noopener" role="button">LittleLink</a>.</p>
-      </div>
+    <div class="container">
+        <div class="column">
+          <main>
+            <!--
+              By default, the Avatar is rounded. Use the following:
+              - avatar--rounded: Automatically rounds the image
+              - avatar--soft: Slightly rounds the image
+              - avatar--none: Removes any rounding
+              Be sure to replace the src with your own image path and update the alt text
+            -->
+            <img class="avatar avatar--rounded" src="images/avatar.png" srcset="images/avatar@2x.png 2x" alt="LittleLink" width="128" height="128" fetchpriority="high">
+
+            <!-- Replace with your name or brand -->
+            <h1>Oscar Lupton</h1>
+
+            <!-- Add a short description about yourself or your brand -->
+            <p>System engineer and <a href="https://smash.org.au" target="_blank" rel="noreferrer noopener" role="link">SMASH!</a> Media TL.<br />Photographer, videographer, and broadcast tech.</p>
+
+            <!-- All your buttons go here -->
+            <nav class="button-stack" aria-label="Links">
+			  <!-- Instagram -->
+			  <a class="button button-instagram" href="https://instagram.com/oscarlupton" target="_blank" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/instagram.svg" alt="Instagram Logo">Instagram</a>
+			  <!-- LinkedIn -->
+              <a class="button button-linked" href="https://linkedin.com/in/oscarlupton" target="_blank" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn</a>
+              <!-- GitHub -->
+              <a class="button button-github" href="https://github.com/oscarlupton" target="_blank" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/github.svg" alt="GitHub Logo">GitHub</a>
+              <!-- Signal -->
+              <a class="button button-signal" href="https://signal.me/#eu/QRf6q_CpU5h0sT-snccDDAUQrQ_7VvVHqNGoFlzh4Rq5AwNLsBVK_o2ijdi_viDz" target="_blank" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/signal.svg" alt="Signal Logo">Signal</a>
+			  <!-- Behance -->
+              <a class="button button-behance" href="https://www.behance.net/oscarlupton1" target="_blank" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/behance.svg" alt="Behance Logo">Behance</a>
+			  <br>
+              <!-- Generic Website -->
+              <a class="button button-default" href="albums.html" target="_blank" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">Convention albums</a>
+      </nav>
+      </main>
+      <footer>
+        Forked from <a href="https://littlelink.io" target="_blank" rel="noopener">LittleLink</a>.
+      </footer>
     </div>
   </div>
 </body>
